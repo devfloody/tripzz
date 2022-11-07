@@ -32,11 +32,13 @@ class HomeView extends HookConsumerWidget {
               children: [
                 IconlyButton(
                   iconly: IconlyLight.category,
+                  color: kSecondaryText,
                   onTap: () {},
                 ),
                 SvgPicture.asset('assets/svg/logo.svg'),
                 IconlyButton(
-                  iconly: IconlyLight.bookmark,
+                  color: kWarning,
+                  iconly: IconlyBold.bookmark,
                   onTap: () {},
                 ),
               ],

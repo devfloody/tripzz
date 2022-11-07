@@ -5,10 +5,12 @@ class IconlyButton extends StatelessWidget {
     Key? key,
     required this.onTap,
     required this.iconly,
+    required this.color,
   }) : super(key: key);
 
   final VoidCallback onTap;
   final IconData iconly;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +26,7 @@ class IconlyButton extends StatelessWidget {
         ),
         child: Icon(
           iconly,
+          color: color,
           size: 28,
         ),
       ),
