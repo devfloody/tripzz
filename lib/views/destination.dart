@@ -15,8 +15,6 @@ class DestinationView extends HookConsumerWidget {
     required this.destination,
   });
 
-  static String routeName = 'destination';
-  static String routeLocation = '/$routeName';
   final Map<String, dynamic> destination;
 
   @override

@@ -15,9 +15,6 @@ import '../widgets/tab_list.dart';
 class HomeView extends HookConsumerWidget {
   const HomeView({super.key});
 
-  static String routeName = 'home';
-  static String routeLocation = '/';
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tripzz/views/views.dart';
+import 'package:tripzz/router/app_routes.dart';
 import 'package:tripzz/widgets/destination_list_item.dart';
 
 class DestinationList extends StatelessWidget {
@@ -34,8 +34,7 @@ class DestinationList extends StatelessWidget {
           return DestinationItem(
             destinationImg: destination[index]['image'],
             onTap: () {
-              // print(destination[index]);
-              context.pushNamed(DestinationView.routeName, extra: destination[index]);
+              context.push(Routes.destination, extra: destination[index]);
             },
             destinationName: destination[index]['name'],
             destinationLocation: destination[index]['location'],
