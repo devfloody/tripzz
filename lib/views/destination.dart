@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:tripzz/config/app_theme.dart';
+import 'package:tripzz/models/destination_model.dart';
 import 'package:tripzz/providers/provider.dart';
 import 'package:tripzz/widgets/detail_menu_list.dart';
 
@@ -15,7 +16,7 @@ class DestinationView extends HookConsumerWidget {
     required this.destination,
   });
 
-  final Map<String, dynamic> destination;
+  final DestinationModel destination;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -34,7 +35,7 @@ class DestinationView extends HookConsumerWidget {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
-                      destination['hero'],
+                      destination.hero,
                     ),
                     fit: BoxFit.cover,
                   ),
@@ -189,7 +190,7 @@ class DestinationView extends HookConsumerWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            destination['name'],
+                            destination.name,
                             style: kPoppinsSemibold.copyWith(fontSize: 28.sp, color: kPrimaryText),
                           ),
                           Row(
@@ -201,7 +202,7 @@ class DestinationView extends HookConsumerWidget {
                               ),
                               const SizedBox(width: 4),
                               Text(
-                                destination['location'],
+                                destination.location,
                                 style: kPoppinsMedium.copyWith(fontSize: 12.sp, color: kError),
                               ),
                             ],

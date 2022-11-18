@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:tripzz/models/destination_model.dart';
 import 'package:tripzz/router/app_routes.dart';
 
 import '../views/views.dart';
@@ -18,7 +19,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         path: Routes.destination,
         name: "Destination",
         builder: (context, state) => DestinationView(
-          destination: state.extra as Map<String, dynamic>,
+          destination: state.extra as DestinationModel,
         ),
       ),
     ],
